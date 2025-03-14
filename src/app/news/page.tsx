@@ -10,7 +10,7 @@ interface News {
 const NewsPage = async () => {
   const res = await fetch('http://localhost:4000/news', {
     next: {
-      revalidate: 3,
+      revalidate: 5,
     },
   });
   const news: News[] = await res.json();
